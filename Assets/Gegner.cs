@@ -7,13 +7,18 @@ public class Gegner : MonoBehaviour
     public float speed = 3f;
     public float rechts;
     public float links;
+    
     private Vector3 rotation;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
         rechts = transform.position.x + rechts;
         links = transform.position.x - links;
         rotation = transform.eulerAngles;
+        
     }
 
     // Update is called once per frame
@@ -27,6 +32,16 @@ public class Gegner : MonoBehaviour
         if (transform.position.x > rechts)
         {
             transform.eulerAngles = rotation;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Geisterball")
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+            
+            
         }
     }
 }

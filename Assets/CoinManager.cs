@@ -26,4 +26,5 @@ public class CoinManager : MonoBehaviour
         geld++;
         PlayerPrefs.SetInt("Money", geld);
     }
+    
 }

@@ -9,6 +9,8 @@ TagManager:
   - Text
   - Spike
   - Gegner
+  - GegnerTop
+  - Geisterball
   layers:
   - Default
   - TransparentFX
