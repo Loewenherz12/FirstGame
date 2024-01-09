@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6C0CB442-3A42-5422-D7FE-F0DFA540D62F}</ProjectGuid>
+    <ProjectGuid>{2D44386C-0AFB-4A08-0BFD-E99A79DDE4CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,7 @@
     <Compile Include="Assets\Button manager.cs" />
     <Compile Include="Assets\CoinManager.cs" />
     <Compile Include="Assets\PlayButton.cs" />
+    <Compile Include="Assets\Bar.cs" />
     <Compile Include="Assets\hit.cs" />
     <Compile Include="Assets\Dead.cs" />
     <Compile Include="Assets\Gdestroy.cs" />
