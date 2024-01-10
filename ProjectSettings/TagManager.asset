@@ -11,6 +11,8 @@ TagManager:
   - Gegner
   - GegnerTop
   - Geisterball
+  - "Schl\xFCssel"
+  - Eisentor
   layers:
   - Default
   - TransparentFX

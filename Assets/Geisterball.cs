@@ -39,7 +39,7 @@ public class Geisterball : MonoBehaviour
             cd = 0;
         }
 
-        Debug.Log("Current Value: " + cd);
+       // Debug.Log("Current Value: " + cd);
     }
 
     public void Attack()
