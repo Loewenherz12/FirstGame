@@ -232,6 +232,11 @@ public class Spieler : MonoBehaviour
 
 
         }
+        if (collision.gameObject.tag == "Brunnen")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        }
 
     }
 
@@ -269,6 +274,8 @@ public class Spieler : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
+
+        
 
 
 
