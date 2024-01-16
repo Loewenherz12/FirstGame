@@ -88,12 +88,12 @@ public class Spieler : MonoBehaviour
         if (hitdown.collider != null)
         {
             isgrounded = true;
-            Debug.Log("Hit Ground! Collider Name: " + hitdown.collider.name);
+           // Debug.Log("Hit Ground! Collider Name: " + hitdown.collider.name);
         }
         else
         {
             isgrounded = false;
-            Debug.Log("No Ground");
+            //Debug.Log("No Ground");
         }
 
         Debug.DrawRay(raycastOrigin, -transform.up * distance, Color.red); // Zeichnet die Raycast-Linie für Debug-Zwecke

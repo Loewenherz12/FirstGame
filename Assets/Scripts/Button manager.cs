@@ -30,7 +30,11 @@ public class Buttonmanager : MonoBehaviour
     
     public void Restart()
     {
-        SceneManager.LoadScene("LvL");
+        // Den Index der aktuellen Szene abrufen
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        // Die aktuelle Szene neu laden
+        SceneManager.LoadScene(currentSceneIndex);
     }
     public void Pause()
     {
