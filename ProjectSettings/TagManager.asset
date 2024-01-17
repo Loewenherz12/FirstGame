@@ -14,6 +14,7 @@ TagManager:
   - "Schl\xFCssel"
   - Eisentor
   - Brunnen
+  - Button
   layers:
   - Default
   - TransparentFX

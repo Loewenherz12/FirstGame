@@ -16,16 +16,21 @@ public class Dead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Restart();
-        }
+        
+
 
     }
 
 
 
+    public void RestartScene()
+    {
+        // Den Index der aktuellen Szene abrufen
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
+        // Die aktuelle Szene neu laden
+        SceneManager.LoadScene(currentSceneIndex);
+    }
 
 
     public void Restart()

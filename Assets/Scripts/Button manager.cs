@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class Buttonmanager : MonoBehaviour
 {
-    
+    public GameObject panel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,21 +21,24 @@ public class Buttonmanager : MonoBehaviour
             Restart();
         }
 
+        if (panel.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Restart();
+            }
+        }
     }
 
-    
-    
-       
-    
-    
     public void Restart()
     {
-        // Den Index der aktuellen Szene abrufen
+        // Get the index of the current scene
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        // Die aktuelle Szene neu laden
+        // Reload the current scene
         SceneManager.LoadScene(currentSceneIndex);
     }
+
     public void Pause()
     {
         SceneManager.LoadScene("Hauptmenü");

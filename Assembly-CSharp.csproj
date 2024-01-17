@@ -60,18 +60,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\hit.cs" />
     <Compile Include="Assets\Scripts\Gegner.cs" />
+    <Compile Include="Assets\Scripts\Falltür.cs" />
     <Compile Include="Assets\Scripts\Geisterball.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Testen.cs" />
     <Compile Include="Assets\Scripts\Gdestroy.cs" />
     <Compile Include="Assets\Scripts\Dead.cs" />
-    <Compile Include="Assets\Scripts\Schlüssel.cs" />
     <Compile Include="Assets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\Scripts\Button manager.cs" />
     <Compile Include="Assets\Scripts\MenüButton.cs" />
     <Compile Include="Assets\Scripts\Spieler.cs" />
     <Compile Include="Assets\Scripts\Lift.cs" />
-    <Compile Include="Assets\Scripts\Eisentor.cs" />
+    <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\CaneraFollow.cs" />
     <Compile Include="Assets\Scripts\Bar.cs" />
     <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
