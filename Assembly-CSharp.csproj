@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\hit.cs" />
+    <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Gegner.cs" />
     <Compile Include="Assets\Scripts\Falltür.cs" />
     <Compile Include="Assets\Scripts\Geisterball.cs" />
