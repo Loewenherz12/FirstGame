@@ -17,6 +17,7 @@ public class Spieler : MonoBehaviour
 
     public GameObject panel;
     public GameObject Eisentor;
+    public GameObject bombObject;
 
     public GameObject kamera;
 
@@ -259,9 +260,19 @@ public class Spieler : MonoBehaviour
             mSchlüssel++;
             Destroy(other.gameObject);
         }
-       
 
+        if (other.gameObject.tag == "Bomb")
+        {
 
+            Destroy(gameObject);
+            panel.SetActive(true);
+            Bomb bombScript = bombObject.GetComponent<Bomb>();
+            if (bombScript != null)
+            {
+                bombScript.explode();
+            }
+
+        }
 
         if (other.gameObject.tag == "Spike")
         {
@@ -269,6 +280,7 @@ public class Spieler : MonoBehaviour
             Destroy(gameObject);
             panel.SetActive(true);
         }
+
         if (other.gameObject.tag == "Finish")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

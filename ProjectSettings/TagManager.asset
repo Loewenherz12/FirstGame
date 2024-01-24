@@ -15,6 +15,7 @@ TagManager:
   - Eisentor
   - Brunnen
   - Button
+  - Bomb
   layers:
   - Default
   - TransparentFX
