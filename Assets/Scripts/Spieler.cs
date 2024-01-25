@@ -24,8 +24,10 @@ public class Spieler : MonoBehaviour
     private float minYPosition;
 
 
-    
+
     private bool allowRotation = true;
+
+    public bool takeMush = false;
 
 
     public float distance;
@@ -33,6 +35,8 @@ public class Spieler : MonoBehaviour
     public float deepDistance;
 
     public float mSchlüssel;
+
+    [SerializeField] private ParticleSystem testParticleSystem = default;
 
     void Start()
     {
@@ -44,7 +48,7 @@ public class Spieler : MonoBehaviour
         minYPosition = kamera.transform.position.y;
     }
 
-    
+
     void Update()
     {
 
@@ -83,13 +87,13 @@ public class Spieler : MonoBehaviour
             isgrounded = false;
         }
 
-        
+
 
 
         if (hitdown.collider != null)
         {
             isgrounded = true;
-           // Debug.Log("Hit Ground! Collider Name: " + hitdown.collider.name);
+            // Debug.Log("Hit Ground! Collider Name: " + hitdown.collider.name);
         }
         else
         {
@@ -102,7 +106,7 @@ public class Spieler : MonoBehaviour
         //RaycastHit2D hitright = Physics2D.Raycast(raycastOrigin, transform.right, distance, layermask);
         Debug.DrawRay(raycastOrigin, transform.right * distance, Color.green); // Zeichnet die Raycast-Linie für Debug-Zwecke
 
-        
+
         Debug.DrawRay(raycastOrigin, -transform.right * distance, Color.blue); // Zeichnet die Raycast-Linie für Debug-Zwecke
 
 
@@ -203,7 +207,15 @@ public class Spieler : MonoBehaviour
 
     //kamera.transform.position = new Vector3(transform.position.x, 0, -10);
 
+    public void die()
+    {
+        testParticleSystem.Play();
+        panel.SetActive(true);
+        Destroy(gameObject);
+    }
+    
 
+    
 
 
 
@@ -220,7 +232,7 @@ public class Spieler : MonoBehaviour
         if (collision.gameObject.tag == "Gegner")
         {
 
-            Destroy(gameObject);
+            die();
             panel.SetActive(true);
 
         }
@@ -246,6 +258,11 @@ public class Spieler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Mush")
+        {
+            takeMush = true;
+            Destroy(other.gameObject);
+        }
 
 
         if (other.gameObject.tag == "Coin")
@@ -264,8 +281,7 @@ public class Spieler : MonoBehaviour
         if (other.gameObject.tag == "Bomb")
         {
 
-            Destroy(gameObject);
-            panel.SetActive(true);
+            die();
             Bomb bombScript = bombObject.GetComponent<Bomb>();
             if (bombScript != null)
             {
@@ -277,9 +293,8 @@ public class Spieler : MonoBehaviour
         if (other.gameObject.tag == "Spike")
         {
 
-            Destroy(gameObject);
-            panel.SetActive(true);
-        }
+            die();
+        } 
 
         if (other.gameObject.tag == "Finish")
         {
@@ -288,11 +303,6 @@ public class Spieler : MonoBehaviour
         }
 
         
-
-
-
-
-
     }
 
 

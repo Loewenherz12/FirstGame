@@ -16,6 +16,7 @@ TagManager:
   - Brunnen
   - Button
   - Bomb
+  - Mush
   layers:
   - Default
   - TransparentFX

@@ -53,7 +53,7 @@
     <UnityVersion>2022.3.10f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -63,12 +63,14 @@
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Scripts\AttachGameObjectsToParticles.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
+    <Compile Include="Assets\Scripts\Bloodfollow.cs" />
     <Compile Include="Assets\Scripts\Gegner.cs" />
     <Compile Include="Assets\Scripts\Falltür.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
     <Compile Include="Assets\Scripts\Geisterball.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
+    <Compile Include="Assets\Scripts\MushFiller.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\FPSTest.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
     <Compile Include="Assets\Scripts\Testen.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Lift.cs" />
     <Compile Include="Assets\Scripts\Button.cs" />
+    <Compile Include="Assets\Scripts\AnimMush.cs" />
     <Compile Include="Assets\Scripts\CaneraFollow.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseFollow.cs" />
     <Compile Include="Assets\Scripts\Bar.cs" />
