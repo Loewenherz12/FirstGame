@@ -12,6 +12,8 @@ public class MushFiller : MonoBehaviour
     public float mushmaxCd;
     public float mushfillSpeed;
 
+    public GameObject UIMush;
+
     // Declare playerSkript as a class-level variable
     private Spieler playerSkript;
 
@@ -20,6 +22,7 @@ public class MushFiller : MonoBehaviour
     {
         // Assign the playerSkript reference in the Start method
         playerSkript = FindObjectOfType<Spieler>();
+        mushcd = 0;
     }
 
     // Update is called once per frame
@@ -27,6 +30,8 @@ public class MushFiller : MonoBehaviour
     {
         if(playerSkript.takeMush)
         {
+            
+
             if (mushcd < mushmaxCd)
             {
                 mushcd += mushfillSpeed * Time.deltaTime;
@@ -40,6 +45,11 @@ public class MushFiller : MonoBehaviour
             }
         }
         
-        
+
+
+
+
+
+
     }
 }

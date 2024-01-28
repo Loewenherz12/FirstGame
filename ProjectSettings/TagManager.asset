@@ -17,6 +17,7 @@ TagManager:
   - Button
   - Bomb
   - Mush
+  - TankMush
   layers:
   - Default
   - TransparentFX

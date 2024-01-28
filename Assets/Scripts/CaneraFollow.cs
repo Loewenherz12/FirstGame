@@ -20,7 +20,8 @@ public class CameraFollow : MonoBehaviour
         else
         {
             // Halte die Kamera an der letzten gültigen Position des Ziels, bevor es null wurde
-            transform.position = lastValidTargetPosition + offset;
+            Vector3 targetPosition = lastValidTargetPosition + offset;
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }
     }
 }

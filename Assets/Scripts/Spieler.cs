@@ -18,6 +18,7 @@ public class Spieler : MonoBehaviour
     public GameObject panel;
     public GameObject Eisentor;
     public GameObject bombObject;
+    public GameObject ImageMushTank;
 
     public GameObject kamera;
 
@@ -28,6 +29,10 @@ public class Spieler : MonoBehaviour
     private bool allowRotation = true;
 
     public bool takeMush = false;
+    public float mMush = 0;
+    public GameObject Portal;
+    public GameObject emptyPortal;
+    
 
 
     public float distance;
@@ -46,6 +51,11 @@ public class Spieler : MonoBehaviour
         m = GameObject.FindGameObjectWithTag("Text").GetComponent<CoinManager>();
 
         minYPosition = kamera.transform.position.y;
+
+        ImageMushTank.SetActive(false);
+        takeMush = false;
+        Portal.SetActive(false);
+        emptyPortal.SetActive(true);
     }
 
 
@@ -145,6 +155,11 @@ public class Spieler : MonoBehaviour
         else
         {
             anim.SetBool("IsJumping", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.G)) 
+        {
+            die();
         }
 
 
@@ -261,8 +276,26 @@ public class Spieler : MonoBehaviour
         if (other.gameObject.tag == "Mush")
         {
             takeMush = true;
+            mMush++;
             Destroy(other.gameObject);
         }
+
+
+
+        if (other.gameObject.tag == "TankMush")
+        {
+            if(mMush > 0)
+            {
+                takeMush = false;
+                ImageMushTank.SetActive(true);
+                emptyPortal.SetActive(false);
+                Portal.SetActive(true);
+                mMush--;
+            }
+
+        }
+
+
 
 
         if (other.gameObject.tag == "Coin")
