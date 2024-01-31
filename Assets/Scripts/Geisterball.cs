@@ -16,6 +16,7 @@ public class Geisterball : MonoBehaviour
     public float maxCd;
     public float fillSpeed;
 
+    [SerializeField] private ParticleSystem testParticleSystem = default;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,7 @@ public class Geisterball : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && Mathf.Approximately(cd, maxCd))
         {
+
             Attack();
             cd = 0;
         }
@@ -46,5 +48,6 @@ public class Geisterball : MonoBehaviour
     {
         clone = Instantiate(GPrefab, Gspawn.position, Gspawn.rotation);
         clone.AddForce(Gspawn.transform.right * Gspeed);
+        testParticleSystem.Play();
     }
 }
