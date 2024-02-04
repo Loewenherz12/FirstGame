@@ -69922,6 +69922,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1508164871166622269, guid: 30c72345623bd1f47b169d0e882f2c1b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1257935378, guid: 16a511ca118c51d4484d3fbaa269cde1, type: 3}
+    - target: {fileID: 3801709214156268508, guid: 30c72345623bd1f47b169d0e882f2c1b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 41473ca97efc5e1469c8d8a8c5d634ae, type: 2}
     - target: {fileID: 4572477225204491177, guid: 30c72345623bd1f47b169d0e882f2c1b, type: 3}
       propertyPath: panel
       value: 
@@ -69997,6 +70005,14 @@ PrefabInstance:
     - target: {fileID: 6744790657096358859, guid: 30c72345623bd1f47b169d0e882f2c1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088282551100311890, guid: 30c72345623bd1f47b169d0e882f2c1b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6856161
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088282551100311890, guid: 30c72345623bd1f47b169d0e882f2c1b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.02400878
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

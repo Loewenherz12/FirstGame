@@ -32,7 +32,7 @@ public class Spieler : MonoBehaviour
     public float mMush = 0;
     public GameObject Portal;
     public GameObject emptyPortal;
-    
+
 
 
     public float distance;
@@ -85,39 +85,37 @@ public class Spieler : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
-        Vector2 raycastOrigin = new Vector2(transform.position.x, transform.position.y - deepDistance); // Hier wird die Raycast-Startposition leicht unterhalb der Spielerposition festgelegt
+        // X-Koordinate für die Raycasts
+        float raycastX = transform.position.x - 0.45f;
+
+        // Erster Raycast nach unten
+        Vector2 raycastOrigin = new Vector2(raycastX, transform.position.y - deepDistance);
         RaycastHit2D hitdown = Physics2D.Raycast(raycastOrigin, -transform.up, distance, layermask);
 
-        // Rest deines Codes bleibt gleich...
+        // Zweiter Raycast nach unten mit angepasster x-Koordinate
+        float raycastX2 = transform.position.x + 0.45f; // Ändere die x-Koordinate nach Bedarf
+        Vector2 raycastOrigin2 = new Vector2(raycastX2, transform.position.y - deepDistance); // Ändere die Tiefe nach Bedarf
+        RaycastHit2D hitdown2 = Physics2D.Raycast(raycastOrigin2, -transform.up, distance, layermask);
 
+        // Setze isgrounded basierend auf den Ergebnissen der Raycasts
+        if (hitdown.collider != null || hitdown2.collider != null)
+        {
+            isgrounded = true;
+        }
+        else
+        {
+            isgrounded = false;
+        }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded == true)
+        Debug.DrawRay(raycastOrigin, -transform.up * distance, Color.red);
+        Debug.DrawRay(raycastOrigin2, -transform.up * distance, Color.yellow); // Farbe kann nach Bedarf geändert werden
+
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded)
         {
             rb.AddForce(Vector2.up * jumph, ForceMode2D.Impulse);
             isgrounded = false;
         }
 
-
-
-
-        if (hitdown.collider != null)
-        {
-            isgrounded = true;
-            // Debug.Log("Hit Ground! Collider Name: " + hitdown.collider.name);
-        }
-        else
-        {
-            isgrounded = false;
-            //Debug.Log("No Ground");
-        }
-
-        Debug.DrawRay(raycastOrigin, -transform.up * distance, Color.red); // Zeichnet die Raycast-Linie für Debug-Zwecke
-
-        //RaycastHit2D hitright = Physics2D.Raycast(raycastOrigin, transform.right, distance, layermask);
-        Debug.DrawRay(raycastOrigin, transform.right * distance, Color.green); // Zeichnet die Raycast-Linie für Debug-Zwecke
-
-
-        Debug.DrawRay(raycastOrigin, -transform.right * distance, Color.blue); // Zeichnet die Raycast-Linie für Debug-Zwecke
 
 
         //------------------------------------------------------------------------------------
@@ -126,11 +124,11 @@ public class Spieler : MonoBehaviour
 
         if (richtung != 0)
         {
-            anim.SetBool("IsRunning", true);
+            anim.SetBool("isRunning", true);
         }
         else
         {
-            anim.SetBool("IsRunning", false);
+            anim.SetBool("isRunning", false);
         }
 
         if (allowRotation) // Überprüfen, ob die Rotation erlaubt ist
@@ -150,11 +148,11 @@ public class Spieler : MonoBehaviour
 
         if (isgrounded == false)
         {
-            anim.SetBool("IsJumping", true);
+            anim.SetBool("isJumping", true);
         }
         else
         {
-            anim.SetBool("IsJumping", false);
+            anim.SetBool("isJumping", false);
         }
 
         if (Input.GetKeyDown(KeyCode.G)) 
