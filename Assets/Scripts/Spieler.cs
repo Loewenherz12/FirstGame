@@ -43,6 +43,7 @@ public class Spieler : MonoBehaviour
 
     [SerializeField] private ParticleSystem testParticleSystem = default;
 
+    public int health = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -61,6 +62,12 @@ public class Spieler : MonoBehaviour
 
     void Update()
     {
+        
+
+        if (health == 1)
+        {
+            die();
+        }
 
         //kamera.transform.position = new Vector3(transform.position.x, Mathf.Max(transform.position.y, minYPosition), -10);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0f);
