@@ -28,17 +28,17 @@ AnimationClip:
       value: {fileID: 21300000, guid: bea42793b07c81b428f77bd2383d4cb4, type: 3}
     - time: 0.2
       value: {fileID: 21300000, guid: 2eeb09f55269b9144b28bd28c1b08161, type: 3}
-    - time: 0.26666668
+    - time: 0.35
       value: {fileID: 21300000, guid: 33666828aabc34045a41280d3c540634, type: 3}
-    - time: 0.33333334
+    - time: 0.41666666
       value: {fileID: 21300000, guid: e46e44c37f92d724dbb6aabefc5913f8, type: 3}
-    - time: 0.4
+    - time: 0.48333332
       value: {fileID: 21300000, guid: df68e8fb074217143ba7139955654c5f, type: 3}
-    - time: 0.46666667
+    - time: 0.55
       value: {fileID: 21300000, guid: 6dc670eaf6121494ba41355c4c07f23a, type: 3}
-    - time: 0.53333336
+    - time: 0.6166667
       value: {fileID: 21300000, guid: 90f0d07a1c856f64f96899341d24d58b, type: 3}
-    - time: 0.6
+    - time: 0.68333334
       value: {fileID: 21300000, guid: c5e6a6401536f554eb4fda26c9fd5292, type: 3}
     attribute: m_Sprite
     path: 
@@ -77,7 +77,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6166667
+    m_StopTime: 0.7
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -97,7 +97,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.33333334
+  - time: 0.35
+    functionName: ParticleAttackPlay
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.36666667
     functionName: Attack
     data: 
     objectReferenceParameter: {fileID: 0}

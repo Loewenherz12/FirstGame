@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\Bloodfollow.cs" />
     <Compile Include="Assets\Scripts\Gegner.cs" />
     <Compile Include="Assets\Scripts\Falltür.cs" />
-    <Compile Include="Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
     <Compile Include="Assets\Scripts\Geisterball.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\LoopingParticleSystemsManager.cs" />
@@ -89,6 +88,7 @@
     <Compile Include="Assets\Scripts\AnimMush.cs" />
     <Compile Include="Assets\Scripts\CaneraFollow.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseFollow.cs" />
+    <Compile Include="Assets\BossSmashScript.cs" />
     <Compile Include="Assets\Scripts\Bossflip.cs" />
     <Compile Include="Assets\Scripts\Bar.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />

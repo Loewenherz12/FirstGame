@@ -7,19 +7,26 @@ public class Boss_Run : StateMachineBehaviour
     public float speed = 2.5f;
     public float attackRange = 3;
 
+    public int attacks = 0;
+    
+
     Transform player;
     Rigidbody2D rb;
     Bossflip bf;
 
+    
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        
 
         if (playerObject != null)
         {
+            
             player = playerObject.transform;
             rb = animator.GetComponent<Rigidbody2D>();
 
@@ -53,8 +60,25 @@ public class Boss_Run : StateMachineBehaviour
 
             if (Vector2.Distance(player.position, rb.position) <= attackRange)
             {
-                animator.SetTrigger("Attack");
+                if(attacks == 4)
+                {
+                    animator.SetTrigger("Smash");
+                    
+                }
+                else
+                {
+                    attacks += 1;
+                    animator.SetTrigger("Attack");
+
+                }
+                
             }
+        }
+
+        if(attacks == 5)
+        
+        {
+            attacks = 0;
         }
     }
 
@@ -62,6 +86,8 @@ public class Boss_Run : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Attack");
+        animator.ResetTrigger("Smash");
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
