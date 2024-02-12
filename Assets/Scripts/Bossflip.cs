@@ -7,7 +7,7 @@ public class Bossflip : MonoBehaviour
     public Transform player;
     public bool isFlipped = false;
 
-    public int Bosshealth ;
+    public int Bosshealth;
 
 
     public Transform attackPos;
@@ -89,7 +89,7 @@ public class Bossflip : MonoBehaviour
         if (other.gameObject.tag == "Geisterball")
         {
             Bosshealth -= 1;
-            Destroy(other.gameObject);
+            
         }
     }
 }

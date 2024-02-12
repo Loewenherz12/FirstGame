@@ -234,7 +234,7 @@ public class Spieler : MonoBehaviour
         Destroy(gameObject);
     }
     
-
+    
     
 
 

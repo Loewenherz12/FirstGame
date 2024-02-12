@@ -21,7 +21,11 @@ public class Gdestroy : MonoBehaviour
     // OnCollisionEnter2D is called when this object collides with another object
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Destroy this object on collision with any other object
+        
+        Destroy(gameObject);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         Destroy(gameObject);
     }
 }
