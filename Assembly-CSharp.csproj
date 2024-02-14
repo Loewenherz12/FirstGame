@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\AnimMush.cs" />
     <Compile Include="Assets\Scripts\CaneraFollow.cs" />
+    <Compile Include="Assets\Scripts\UIButtons.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseFollow.cs" />
     <Compile Include="Assets\BossSmashScript.cs" />
     <Compile Include="Assets\Scripts\Bossflip.cs" />

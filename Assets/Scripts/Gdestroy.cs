@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gdestroy : MonoBehaviour
 {
-    public float dauer = 10;
+    public float dauer = 10f;
 
     // Start is called before the first frame update
     void Start()
