@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
-    
-    int nextSceneIndex = 1; 
-    
+    private Transition t;
+    int nextSceneIndex = 1;
+    [SerializeField] Animator trans;
+
     void Start()
     {
-        
+
     }
 
     
@@ -32,5 +33,8 @@ public class UIButtons : MonoBehaviour
         // Anwendung beenden
         Application.Quit();
     }
-
+    public void transiton()
+    {
+        trans.SetTrigger("transition");
+    }
 }

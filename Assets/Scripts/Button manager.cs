@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class Buttonmanager : MonoBehaviour
 {
     public GameObject panel;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -43,4 +44,6 @@ public class Buttonmanager : MonoBehaviour
     {
         SceneManager.LoadScene("Hauptmenü");
     }
+
+    
 }
